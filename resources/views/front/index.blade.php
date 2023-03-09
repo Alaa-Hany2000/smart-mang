@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<link rel="stylesheet" href="/alaa/css/style.css">
 
 	</head>
@@ -45,7 +45,7 @@
 									</label>
 								</div>
 								<div class="w-50 text-md-right">
-									<a href="#" style="color: #fff">Forgot Password</a>
+									<!-- <a href="#" style="color: #fff">Forgot Password</a> -->
 								</div>
 	            </div>
 	          </form>
