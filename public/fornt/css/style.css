@@ -1,0 +1,17 @@
+html , .mu{
+
+    background-image: linear-gradient(to bottom, #bdb659, #c5c054, #d0cb4b,#69662d, rgba(0,0,0,1));
+
+    background-repeat:no-repeat;
+    height:100%;
+}
+nav ,.navbar {
+    background-image: linear-gradient(to bottom, #bdb659, #e7df34, #d0cb4b, #faee03, rgba(0,0,0,1))!important;
+
+    background-repeat:no-repeat;
+    height:100%;
+}
+.btn-sl{
+    background-color: #fae90b;
+    border: #eae111 2px solid;
+}
