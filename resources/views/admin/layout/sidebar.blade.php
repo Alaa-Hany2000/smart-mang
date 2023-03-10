@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="{{url('/admin/dashboard')}}" class="brand-link" class="text-align:center">
         <img src="{{asset('upload').'/'.$settings['logo']}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-       <br/>
+        <br />
         <span class="brand-text font-weight-light">{{ $settings->ar_title }}</span>
     </a>
 
@@ -12,10 +12,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-         @if(auth()->user()->photo != null)
-                    <img src="<?php echo asset('upload/adminProfile/') . '/' .auth()->user()->photo ?>"  style="width:5rem;" class="img-circle elevation-2" alt="User Image">
+                @if(auth()->user()->photo != null)
+                <img src="<?php echo asset('upload/adminProfile/') . '/' . auth()->user()->photo ?>" style="width:5rem;" class="img-circle elevation-2" alt="User Image">
                 @else
-                    <img src="{{ asset('admin/img/image.jpg') }}" class="img-circle elevation-2" style="width:5rem;" alt="User Image">
+                <img src="{{ asset('admin/img/image.jpg') }}" class="img-circle elevation-2" style="width:5rem;" alt="User Image">
                 @endif
             </div>
             <div class="info">
@@ -37,7 +37,7 @@
                 "title" => trans("main.Categories"),
                 "icon" => "fa-edit",
                 "child" => [
-                  /*  [
+                    /*  [
                         "href" => ("admin/adminStores"),
                         "title" => trans("main.stores"),
                     ],*/
@@ -52,7 +52,7 @@
                     ],
                 ]
             ],
-              [
+            [
                 "href" => "#",
                 "title" => trans("main.Products"),
                 "icon" => "fa-newspaper",
@@ -87,19 +87,19 @@
                         "href" => ("admin/adminBills"),
                         "title" => 'فاوتير البيع',
                     ],
-                       [
+                    [
                         "href" => ("admin/spluersBill"),
                         "title" => 'فاوتير الشراء',
                     ],
-                     [
+                    [
                         "href" => ("admin/billsreback"),
                         "title" => 'فاوتير المرتجع',
                     ],
-                      [
+                    [
                         "href" => ("admin/spluersBack"),
                         "title" => 'فاوتير اعاده للمورد',
                     ],
-                      [
+                    [
                         "href" => ("admin/damagebill"),
                         "title" => ' الهوالك',
                     ],
@@ -132,7 +132,7 @@
                 "title" => trans("main.Settings"),
                 "icon" => "fa-cog"
             ],
-       /* ["href" => "#", "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", "child" => [["href" => ("admin/adminSalaries"), "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", ] ] ], ["href" => "#", "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", "child" => [["href" => ("admin/adminSalaries"), "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", ] ] ],*/ [
+            /* ["href" => "#", "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", "child" => [["href" => ("admin/adminSalaries"), "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", ] ] ], ["href" => "#", "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", "child" => [["href" => ("admin/adminSalaries"), "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", ] ] ],*/ [
                 "href" => ('/admin/listUsers'),
                 "title" => trans("main.User Management"),
                 "icon" => "fa-user"
@@ -197,14 +197,14 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
 
-{{--
+                {{--
 
 --}}
 
 
 
 
-   <?php
+                <?php
 
                 menu($navList);
                 if (auth()->user()->hasRole('admin'))
@@ -220,9 +220,78 @@
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
+        <style>
+            .checkbox {
+                opacity: 0;
+                position: absolute;
+            }
+
+            .label {
+                width: 50px;
+                height: 26px;
+                background-color: #111;
+                display: flex;
+                border-radius: 50px;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px;
+                position: relative;
+                transform: scale(1.5);
+            }
+
+            .ball {
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                border-radius: 50%;
+                transition: transform 0.2s linear;
+            }
+
+            /*  target the elemenent after the label*/
+            .checkbox:checked+.label .ball {
+                transform: translateX(24px);
+            }
+
+            .fa-moon {
+                color: pink;
+            }
+
+            .fa-sun {
+                color: yellow;
+            }
+        </style>
+        <div class="d-flex justify-content-center align-items-end" style="height: 100px;">
+            <div>
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <i class="fas fa-moon"></i>
+                    <i class='fas fa-sun'></i>
+                    <div class='ball'>
+                </label>
+            </div>
+        </div>
     </div>
     <!-- /.sidebar -->
 </aside>
+<script>
+    const checkbox = document.getElementById('checkbox');
+
+    if (!window.localStorage.getItem('mode')) {
+        window.localStorage.setItem('mode', 'dark')
+        document.body.classList.add('dark');
+    }else
+    if(window.localStorage.getItem('mode') == 'light') {
+            document.body.classList.remove('dark');
+            checkbox.checked = true
+    };
+    checkbox.addEventListener('change', () => {
+        document.body.classList.toggle('dark');
+        window.localStorage.getItem('mode') == 'dark'  ? window.localStorage.setItem('mode', 'light') : window.localStorage.setItem('mode', 'dark')
+    })
+</script>
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
