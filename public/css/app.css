@@ -307,4 +307,8 @@ tr {
 
         border-top: 1px solid #39434c;
     }
+    .badge-success {
+        color: #0a0909;
+        background-color: #28a745;
+    }
 }
