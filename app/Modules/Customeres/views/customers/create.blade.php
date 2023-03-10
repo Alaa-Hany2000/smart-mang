@@ -42,16 +42,16 @@
                                         <div class="form-group">
 
                                         <label for="name">{{trans('main.Name')}}</label>
-                                        <input type="text" name="name" id="name" class="form-control" placeholder="muhammad abdelsalam"/>
+                                        <input type="text" name="name" id="name" class="form-control" placeholder=""/>
                                         </div>
                                         <div class="form-group">
                                         <label for="phone">{{trans('main.Phone')}}</label>
-                                        <input type="text" name="phone" id="phone" class="form-control" placeholder="01013924210"/>
+                                        <input type="text" name="phone" id="phone" class="form-control" placeholder=""/>
                                         </div>
                                         <div class="form-group">
 
                                         <label for="email">{{trans('main.Email')}}</label>
-                                        <input type="email" name="email" id="email"  class="form-control" placeholder="muhammadabdelsalm7@gmail.com"/>
+                                        <input type="email" name="email" id="email"  class="form-control" placeholder=""/>
                                         </div>
                                         <div class="form-group">
 

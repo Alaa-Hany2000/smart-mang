@@ -64,11 +64,11 @@
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    
+
     <![endif]-->
 </head>
 <body>
-<?php 
+<?php
 $balance=App\Modules\Balances\Models\Balance::where('customer_id',$customer->id)->first();
 ?>
 
@@ -79,47 +79,47 @@ $balance=App\Modules\Balances\Models\Balance::where('customer_id',$customer->id)
 					<div class="">
 						<div class="flax" style="max-hight:120px;">
 							<div class="row" >
-							
-							
-						
+
+
+
 									<div class="  col-sm-4 text-right" >
-									
+
 									<div class="logo-wrapper">
 										<img src="{{asset('upload').'/'.$settings['logo']}}" width="30" hight="30" alt="AdminLTE Logo" class=" logo pull-right brand-image img-circle elevation-3" style="opacity: .8">
 										</div>
 										<h2 style=" display: inline; "  class="our-company-name">مؤسسة:{{ $settings->ar_title }}</h2>
-									
+
 																				<h6 >بتاريخ {{ date('d/m/Y', strtotime($bill->created_at)) }}</h5>
-										
+
 										<h6  style=" display: inline; >{{ $settings->phone1 }} ,{{ $settings->phone2 }}</h6>
 										<div  style=" display: inline; " >
-								
+
 											<h6 style=" display: inline; "  >المحرر {{$user->name}}</h6>
 											</div>
 
 								</div>
 						</div>
-					
+
 								<h4 class="text-center">فاتورة توريد </h4>
 								<div class="row">
 									<table class="table table-bordered">
   <thead class="thead-dark">
     <tr>
       <th class="text-right" scope="col">رقم الفاتورة</th>
-     
+
       <th class="text-right" colspan="3">{{$bill->id }}222</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th class="text-right" scope="row">الاسم</th>
-     
-     
+
+
       <td  class="text-right" colspan="3">{{$customer->name}}</td>
     </tr>
     <tr>
       <th scope="row" class="text-right">العنوان</th>
-     
+
       <td  class="text-right" colspan="3">{{$customer->address}}</td>
     </tr>
     <tr>
@@ -136,13 +136,13 @@ $balance=App\Modules\Balances\Models\Balance::where('customer_id',$customer->id)
 
 
 
-									
+
 								</div>
 									<div class="row">
 								<div class="col-md-12 col-sm-12">
-								
+
 										    <table class="table table-bordered">
-										
+
 											 <thead class="thead-dark">
     <tr  class="table-dark" style="background-color: #45aa67;">
 	                                                <th class="text-right" >م</th>
@@ -189,9 +189,9 @@ $balance=App\Modules\Balances\Models\Balance::where('customer_id',$customer->id)
                                                 @endforeach
 												<tr>
 												<td scope="col" class="text-right" colspan="3">الاجمالي</td>
-		
+
 																		<td scope="col" class="text-right" colspan="4">{{$amount}}</td>
-	
+
 																					<td scope="col" class="text-right">{{$bill->total}}</td>
 
 
@@ -201,27 +201,27 @@ $balance=App\Modules\Balances\Models\Balance::where('customer_id',$customer->id)
                                             </tbody>
                                         </table>
 											<div class="col-sm-3 col-md-3" dir="ltr">
-								
-									
+
+
 										<h5 style=" display: inline; " > المدفوع</h5>
 										<h4 style=" display: inline; " > {{$bill->paid}}</h4>
 											<h5 style=" display: inline; " > الباقي</h5>
 										<h4 style=" display: inline; " > {{$bill->unpaid}}</h4>
-									
+
 								</div>
 								</div>
-									
+
 										<ul>
 											<li>{{ $settings->term }}</li>
-										
+
 										</ul>
-								
+
 								</div>
 								<div class="clearfix"></div>
 								<div class="col-xs-12">
 									<hr class="divider">
 								</div>
-								<div class="col-sm-4" style=" display: inline; " >
+								<!-- <div class="col-sm-4" style=" display: inline; " >
 									<h6 class="text-left" style=" display: inline; " >01013924210</h6>
 								</div>
 								<div class="col-sm-4" style=" display: inline; " >
@@ -229,9 +229,9 @@ $balance=App\Modules\Balances\Models\Balance::where('customer_id',$customer->id)
 								</div>
 								<div class="col-sm-4" style=" display: inline; " >
 									<h6 class="text-right" style=" display: inline; " >برمجة م / محمد الشخص</h6>
-								</div>
+								</div> -->
 							</div>
-						
+
 						</div>
 					</div>
 				</div>
@@ -283,7 +283,7 @@ $balance=App\Modules\Balances\Models\Balance::where('customer_id',$customer->id)
     <script src="vendor/jquery/dist/jquery.min.js"></script>
 
     <script src="{{ asset('admin/js/adminlte.min.js')}}"></script>
-   
+
 <script type="text/javascript">
 window.print();
     </script>

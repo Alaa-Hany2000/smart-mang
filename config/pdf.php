@@ -13,7 +13,7 @@ return [
     'orientation'          => 'P',
     'title'                => 'فاتورة',
     'author'               => '',
-    'watermark'            =>'01013924210',
+    'watermark'            => 'Alaa',
     'show_watermark'       => true,
     'watermark_font'       => 'sans-serif',
     'display_mode'         => 'fullpage',

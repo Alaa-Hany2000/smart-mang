@@ -33,21 +33,21 @@
 					<div class="">
 						<div class="flax" style="max-hight:120px;">
 							<div class="row" >
-							
-							
-						
+
+
+
 									<div class="  col-sm-4">
-									
+
 									<div class="logo-wrapper">
 										<img src="{{asset('upload').'/'.$settings['logo']}}" width="30" hight="30" alt="AdminLTE Logo" class=" logo pull-right brand-image img-circle elevation-3" style="opacity: .8">
 										</div>
 										<h2 style=" display: inline; "  class="our-company-name">مؤسسة:{{ $settings->ar_title }}</h2>
 										<h6 style=" "  class="our-address">العنوان:{{ $settings->address1 }}</h6>
 																				<h6 >بتاريخ {{ date('d/m/Y', strtotime($bill->created_at)) }}</h5>
-										
+
 										<h6>{{ $settings->phone1 }} ,{{ $settings->phone2 }}</h6>
 										<div  style=" display: inline; " >
-								
+
 											<h6 style=" display: inline; "  >المحرر {{$user->name}}</h6>
 											</div>
 
@@ -59,17 +59,17 @@
 									<h2 class="">السيد:{{$customer->name}}</h2>
 									<h6>{{$customer->phone}}</h6>
 								</div>
-							
+
 
 								<div class="col-sm-3 col-md-3" dir="ltr">
-								
+
 										<h5  style=" display: inline; " > رقم</h5>
 										<h4 style=" display: inline; " > {{$bill->id }}222</h4>
-									
-									
+
+
 								</div>
 								<div class="col-md-offset-1 col-md-8 col-sm-9">
-								
+
 										    <table class="table">
                                                 <th class="text-right" >{{ trans('main.Product') }}</th>
                                                 <th class="text-right" >{{ trans('main.Price') }}</th>
@@ -109,26 +109,26 @@
                                             </tbody>
                                         </table>
 											<div class="col-sm-3 col-md-3" dir="ltr">
-								
-									
+
+
 										<h5 style=" display: inline; " > المدفوع</h5>
 										<h4 style=" display: inline; " > {{$bill->paid}}</h4>
 											<h5 style=" display: inline; " > الباقي</h5>
 										<h4 style=" display: inline; " > {{$bill->unpaid}}</h4>
-									
+
 								</div>
 										<h4 class="terms">الشروط</h4>
 										<ul>
 											<li>{{ $settings->term }}</li>
-										
+
 										</ul>
-								
+
 								</div>
 								<div class="clearfix"></div>
 								<div class="col-xs-12">
 									<hr class="divider">
 								</div>
-								<div class="col-sm-4" style=" display: inline; " >
+								<!-- <div class="col-sm-4" style=" display: inline; " >
 									<h6 class="text-left" style=" display: inline; " >01013924210</h6>
 								</div>
 								<div class="col-sm-4" style=" display: inline; " >
@@ -136,9 +136,9 @@
 								</div>
 								<div class="col-sm-4" style=" display: inline; " >
 									<h6 class="text-right" style=" display: inline; " >برمجة م / محمد الشخص</h6>
-								</div>
+								</div> -->
 							</div>
-						
+
 						</div>
 					</div>
 				</div>
