@@ -1,0 +1,130 @@
+
+*{
+    font-family : "Cairo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"!important;
+    /* color: #344767; */
+}
+.fas,.far,.fa {
+    font-family: "Font Awesome 5 Free"!important;
+    /* color: #f9fafd */
+}
+.bg-danger, .alert-danger, .alert-error, .bg-danger > a, .alert-danger > a, .alert-error > a {
+    color: #ffffff !important;
+}
+.bg-success, .alert-success {
+    background-color: #5effa3 !important
+}
+.bg-warning, .alert-warning {
+    background-color: #fff87f !important
+}
+.bg-gray {
+    background-color: #8d9ca9 !important;
+}
+.card {
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #fff;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+}
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+.info-box ,.small-box{
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+.info-box .info-box-icon {
+    background-image: linear-gradient(310deg,#7928ca,#ff0080);
+    background-position: 50%;
+    border-radius: 0.5rem;
+}
+.small-box{
+    overflow:hidden;
+}
+[class*='sidebar-dark-'] {
+    background-color: #13191e;
+}
+.card .card-body {
+    font-family: Open Sans;
+    padding: 1.5rem;
+}
+.main-header {
+    border-bottom: 1px solid #dee2e6;
+    border: 0 solid rgba(0,0,0,.125);
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    z-index: 1034;
+}
+:not(.layout-fixed) .main-sidebar {
+    border: 0 solid rgba(0,0,0,.125);
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+.bg-gradient-dark,.badge-dark {
+    background-image: linear-gradient(310deg,#141727,#3a416f)!important;
+}
+.bg-gradient-danger,.badge-danger {
+    background-image: linear-gradient(310deg,#ea0606,#ff667c)!important;
+}
+.bg-gradient-info,.badge-info {
+    background-image: linear-gradient(310deg,#2152ff,#21d4fd)!important;
+}
+.bg-gradient-warning,.badge-warning {
+    background-image: linear-gradient(310deg,#f53939,#fbcf33)!important;
+}
+.bg-gradient-success,.badge-success {
+    background-image: linear-gradient(310deg,#17ad37,#c1e823)!important;
+}
+.bg-gradient-olive{
+    background-image: linear-gradient(114deg,#236e41,#a7f1c8)!important;
+}
+.imgCategory {
+    align-items: center;
+    border-radius: 0.75rem;
+    color: #fff;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 48px;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+    width: 48px;
+}
+table {
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #67748e;
+    --bs-table-striped-bg: rgba(0,0,0,.05);
+    --bs-table-active-color: #67748e;
+    --bs-table-active-bg: rgba(0,0,0,.1);
+    --bs-table-hover-color: #67748e;
+    --bs-table-hover-bg: rgba(0,0,0,.075);
+    border-color: #e9ecef;
+    color: #67748e;
+    margin-bottom: 1rem;
+    vertical-align: top;
+    width: 100%;
+}
+.table>thead {
+    vertical-align: bottom;
+}
+tr {
+    border: 0 solid;
+    border-color: inherit;
+}
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #e9ecef;
+}
+.table-bordered th, .table-bordered td {
+    border: 0px solid #e9ecef;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgb(0 0 0 / 3%);
+}

@@ -59,7 +59,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ asset('admin/css/rtl.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
 
-
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
         .dataTables_filter {

@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-3">
                       <div class="info-box">
-                        <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cart-arrow-down"></i></span>
+                        <span class="info-box-icon bg-info bg-gradient-info elevation-1"><i class="fas fa-cart-arrow-down"></i></span>
 
                         <div class="info-box-content">
                           <span class="info-box-text">فاونير الوارد اليوم</span>
@@ -86,7 +86,7 @@
 
                     <div class="col-12 col-sm-6 col-md-3">
                       <div class="info-box mb-3">
-                        <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shipping-fast"></i></span>
+                        <span class="info-box-icon bg-success bg-gradient-success  elevation-1"><i class="fas fa-shipping-fast"></i></span>
 
                         <div class="info-box-content">
                           <span class="info-box-text">الموردين الجدد</span>
@@ -99,7 +99,7 @@
                     <!-- /.col -->
                     <div class="col-12 col-sm-6 col-md-3">
                       <div class="info-box mb-3">
-                        <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
+                        <span class="info-box-icon bg-info  bg-gradient-info elevation-1"><i class="fas fa-users"></i></span>
 
                         <div class="info-box-content">
                           <span class="info-box-text">العملاء الجدد</span>
@@ -114,7 +114,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
-                        <div class="small-box bg-info">
+                        <div class="small-box bg-info bg-gradient-info ">
                             <div class="inner">
                                 <h3>{{$categories->count()}}</h3>
 
@@ -129,7 +129,7 @@
                     <!-- ./col -->
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
-                        <div class="small-box bg-success">
+                        <div class="small-box bg-success bg-gradient-success ">
                             <div class="inner">
                                 <h3>{{$products->count()}}<sup style="font-size: 20px"><i class="ion ion-images"></i></sup></h3>
 
@@ -159,7 +159,7 @@
                     <!-- ./col -->
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
-                        <div class="small-box bg-danger">
+                        <div class="small-box bg-danger bg-gradient-danger">
                             <div class="inner">
                                 <h3>{{$customers->count()}}</h3>
 
@@ -178,7 +178,7 @@
                     @if($suppl)
                         <div class="col-lg-6 col-6">
 
-                            <div class="small-box bg-gray">
+                            <div class="small-box bg-gray bg-gradient-dark">
                                 <div class="inner">
                                     <h6>{{$suppl->name}}</h6>
                                     <h3>{{$suppl->phone}}</h3>
@@ -193,7 +193,7 @@
                     @if($zp)
                         <div class="col-lg-6 col-6">
 
-                            <div class="small-box bg-warning">
+                            <div class="small-box bg-warning bg-gradient-warning ">
                                 <div class="inner">
                                     <h6>اخر منتج نفاذ</h6>
                                     <p>{{$zp->title}}</p>
