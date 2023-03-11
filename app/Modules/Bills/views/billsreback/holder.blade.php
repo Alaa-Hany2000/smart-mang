@@ -101,7 +101,7 @@
                                                                </td>
                                                                <td > <input style="max-width:70px;" type="number" readonly name="allow" id="allow"></td>
                                                                  <td > <input type="number" name="prices[]" id="priceone" ></td>
-                                                                   <td><input type="range"style="max-width: 135px;"  name="amount" value="1"  min="1" step="1" id="rangeone"><input type="number" disabled style="max-width: 87px;" id="rr" class="border border-dark "/>
+                                                                   <td><input type="number" style="max-width: 135px;"  name="amount" value="1"  min="1" step="1" id="rangeone"><input type="number" disabled style="max-width: 87px;" id="rr" class="border border-dark "/>
 </td>
                                                                      <td><input style="max-width:87px;" type="number" readonly name="total[]" id="amountone"></td>
                                                                </tr> 
