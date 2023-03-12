@@ -88,6 +88,8 @@ return array(
     'App\\Modules\\Units\\models\\Unit' => $baseDir . '/app/Modules/Units/models/Unit.php',
     'App\\Modules\\Units\\models\\UnitCategory' => $baseDir . '/app/Modules/Units/models/UnitCategory.php',
     'App\\Modules\\Users\\Controllers\\adminUsersController' => $baseDir . '/app/Modules/Users/Controllers/adminUsersController.php',
+    'App\\Notifications\\ProductExpire' => $baseDir . '/app/Notifications/ProductExpire.php',
+    'App\\Notifications\\ProductLowStock' => $baseDir . '/app/Notifications/ProductLowStock.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

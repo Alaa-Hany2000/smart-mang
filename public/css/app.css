@@ -311,4 +311,23 @@ tr {
         color: #0a0909;
         background-color: #28a745;
     }
+    .dark .dropdown-menu {
+        color: #fff;
+        background-color: #13191e;
+    }
+    .dark .dropdown-menu {
+        color: #fff;
+        background-color: #13191e;
+    }
 /* } */
+.dropdown-menu,.dropdown-menu *{
+    direction:rtl!important;
+
+}
+.dropdown-menu {
+    width:400px
+
+}
+.dropdown-item{
+    white-space: normal;
+}

@@ -764,6 +764,8 @@ class ComposerStaticInit131012376d1dffe31648b92a9b5ddc2b
         'App\\Modules\\Units\\models\\Unit' => __DIR__ . '/../..' . '/app/Modules/Units/models/Unit.php',
         'App\\Modules\\Units\\models\\UnitCategory' => __DIR__ . '/../..' . '/app/Modules/Units/models/UnitCategory.php',
         'App\\Modules\\Users\\Controllers\\adminUsersController' => __DIR__ . '/../..' . '/app/Modules/Users/Controllers/adminUsersController.php',
+        'App\\Notifications\\ProductExpire' => __DIR__ . '/../..' . '/app/Notifications/ProductExpire.php',
+        'App\\Notifications\\ProductLowStock' => __DIR__ . '/../..' . '/app/Notifications/ProductLowStock.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
