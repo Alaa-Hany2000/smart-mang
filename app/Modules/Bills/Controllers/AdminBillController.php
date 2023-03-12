@@ -139,12 +139,16 @@ class AdminBillController extends Controller
             }
             foreach ($schedules as $bill_item) {
                 $product = Product::where('id',  $bill_item['product_id'])->first();
-                $noti = [
-                    'title' => 'تنبيه بنفاذ الكمية',
-                    'body' => "أوشك $product->title على النفاز . الكمية المتبقية $product->total ",
-                    'action' => '',
-                ];
-                auth()->user()->notify(new ProductLowStock($noti));
+                if ($product) {
+                    if ($product->total < $product->ex_qty) {
+                        $noti = [
+                            'title' => 'تنبيه بنفاذ الكمية',
+                            'body' => "أوشك $product->title على النفاز . الكمية المتبقية $product->total ",
+                            'action' => '',
+                        ];
+                        auth()->user()->notify(new ProductLowStock($noti));
+                    }
+                }
             }
         }
         $lastsale = Sale::where('bill_id', $id)->sum('total');
