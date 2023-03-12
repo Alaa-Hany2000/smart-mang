@@ -142,7 +142,7 @@ class AdminBillController extends Controller
                 if ($product) {
                     if ($product->total < $product->ex_qty) {
                         $noti = [
-                            'title' => 'تنبيه بنفاذ الكمية',
+                            'title' => 'تنبيه بنفاز الكمية',
                             'body' => "أوشك $product->title على النفاز . الكمية المتبقية $product->total ",
                             'action' => '',
                         ];
