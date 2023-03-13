@@ -57,7 +57,7 @@
                         <span class="info-box-icon bg-info bg-gradient-info elevation-1"><i class="fas fa-cart-arrow-down"></i></span>
 
                         <div class="info-box-content">
-                          <span class="info-box-text">فاونير الوارد اليوم</span>
+                          <span class="info-box-text">فواتير الوارد اليوم</span>
                           <span class="info-box-number">
                            {{ $billin}}
                           </span>
