@@ -35,14 +35,14 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
                 <i class="far fa-bell"></i>
-                <span class="badge badge-warning navbar-badge">{{ count(auth()->user()->unreadNotifications) > 0 ? count(auth()->user()->unreadNotifications) : '' }}</span>
+                <span id="noti-badge" class="badge badge-warning navbar-badge">{{ count(auth()->user()->unreadNotifications) > 0 ? count(auth()->user()->unreadNotifications) : '' }}</span>
 
             </a>
             @if(count(auth()->user()->unreadNotifications ) > 0)
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 @foreach(auth()->user()->unreadNotifications as $noti)
                 @if($noti->type == 'App\Notifications\ProductLowStock')
-                <a class="dropdown-item hr" href="#"><h5>{{ $noti->data['product']['title'] }} </h5><p>{{ $noti->data['product']['body'] }} </p></a>
+                <a class="dropdown-item hr" href="#" onclick="notifcationRead({{ "'".$noti->id."'" }},this)"><h5>{{ $noti->data['product']['title'] }} </h5><p>{{ $noti->data['product']['body'] }} </p></a>
                 @endif
                 @endforeach
             </div>
@@ -58,5 +58,31 @@
         </li>
     </ul>
 </nav>
+<script>
+    function notifcationRead(id,ele){
+        const data = {};
+        data["id"] = id
+        fetch(`/admin/notifcation-read/${id}`, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "X-Requested-With": "XMLHttpRequest",
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            credentials: "same-origin",
+            method: 'post',
+            body: JSON.stringify(data),
+        }).then((response) => response.json()).then((data) => {
+
+            if(data === true){
+                ele.remove();
+                let notiNum = $('#noti-badge').html()-1
+
+                $('#noti-badge').html(notiNum <= 0 ?  '' : notiNum)
+                console.log($('#noti-badge').html())
+            }
+        });
+    }
+</script>
 <!-- /.navbar -->
 @include('admin.layout.sidebar')
