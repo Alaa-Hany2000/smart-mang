@@ -6,7 +6,7 @@ Route::group(array('prefix' => 'admin'), function () {
     Route::post('/login', \App\Http\Controllers\AdminController::class . "@postLogin");
 
     Route::get('/dashboard', App\Http\Controllers\HomeController::class . '@index')->name('home');
-    Route::get('/chart-line-ajax', App\Http\Cosntrollers\HomeController::class . '@chartLineAjax')->name('chartLineAjax')->middleware('role:admin');
+    Route::get('/chart-line-ajax', App\Http\Controllers\HomeController::class . '@chartLineAjax')->name('chartLineAjax')->middleware('role:admin');
     Route::get('/', App\Http\Controllers\HomeController::class . '@index');
 
     Route::group(['middleware' => 'auth'], function () {
@@ -29,7 +29,7 @@ Route::group(array('prefix' => 'admin'), function () {
 
         //  Settings
         /*================Admin Setting control =========================*/
-        // Route::resource('settings', App\Http\Controllers\Admin\AdminSettingController::class)->middleware('role:admin');
+        Route::resource('settings', \App\Http\Controllers\Admin\AdminSettingController::class)->middleware('role:admin');
         /*  Route::post('/settings/store', \App\Modules\Admin\Controllers\SettingsController::class . "@store")->name('settings.store')->middleware('role:admin');
         Route::post('/settings/update', \App\Modules\Admin\Controllers\SettingsController::class . "@update")->name('settings.update')->middleware('role:admin');
         Route::delete('/settings/delete/{id}', \App\Modules\Admin\Controllers\SettingsController::class . "@delete")->name('settings.delete')->middleware('role:admin');
