@@ -128,9 +128,9 @@
 
 
             [
-                "href" => ('/admin/settings'),
-                "title" => trans("main.Settings"),
-                "icon" => "fa-cog"
+                // "href" => ('/admin/settings'),
+                // "title" => trans("main.Settings"),
+                // "icon" => "fa-cog"
             ],
             /* ["href" => "#", "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", "child" => [["href" => ("admin/adminSalaries"), "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", ] ] ], ["href" => "#", "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", "child" => [["href" => ("admin/adminSalaries"), "title" => trans("main.adminSalaries"), "icon" => "fa-newspaper", ] ] ],*/ [
                 "href" => ('/admin/listUsers'),
