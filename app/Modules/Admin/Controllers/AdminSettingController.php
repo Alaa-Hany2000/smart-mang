@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\App\Modules\Admin\Controllers;
 
 use App\Setting;
 use App\Translation;
@@ -19,7 +19,7 @@ class AdminSettingController extends Controller
     public function index()
     {
        
-        return view('admin.setting.setting');
+        return view('setting');
     }
 
     /**
