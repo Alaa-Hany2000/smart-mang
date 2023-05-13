@@ -103,7 +103,7 @@
                                                                </td >
                                                                <td  class="col-sm-2"> <input style="max-width:70px;" type="number" readonly name="allow" id="allow"></td>
                                                                  <td  class="col-sm-2"> <input type="number" name="prices[]" id="priceone"style="max-width: 86px;" ></td>
-                                                                   <td class="col-sm-2"><input type="number" style="max-width: 85px;"  name="amounts[]" value="1"  min="1" step="1" max="10000" id="rangeone"><input type="number" disabled style="max-width: 87px;" id="rr" class="border border-dark "/></td>
+                                                                   <td class="col-sm-2"><input type="number" style="max-width: 85px;"  name="amounts[]" value="1"  step="1" id="rangeone"></td>
 
                                                                    <td class="col-sm-2"><input style="max-width:87px;" type="number" class readonly name="totals[]" id="amountone"></td>
                                                                </tr>
@@ -220,7 +220,7 @@ $('#'+product_id+'billrange').val(amount);
                 '<td  class="fristtd col-sm-3" ></td>' +
                   '<td  class=" col-sm-2"  ><input  style="max-width:70px;" type="text" name="allows[]" readonly class="allows"></td>' +
                 '<td   class=" col-sm-2" ><input style="max-width:70px;" type="text" name="prices[]" class="prices"></td>' +
-                '<td  class=" col-sm-2" ><input type="range"style="max-width: 85px;"  name="amounts[]" value="1"  min="1" step="1" class="amounts"><input type="number" disabled style="max-width: 87px;" class="ranges" class="border border-dark "/></td>' +
+                '<td  class=" col-sm-2" ><input type="number" style="max-width: 85px;"  name="amounts[]" value="1"  min="1" step="1" class="amounts ranges"></td>' +
                 '<td  class=" col-sm-2" ><input style="max-width:70px;" type="number" readonly  name="totals[]" class="totals"></td>' +
 
 
